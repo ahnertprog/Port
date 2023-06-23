@@ -1,9 +1,9 @@
 <?php
 // Configurações do banco de dados MySQL
-$hostname = 'localhost';  // Nome do servidor MySQL
-$username = 'id20852256_ahnert';  // Nome de usuário do MySQL
-$password = 'Pazdejah1.';  // Senha do MySQL
-$database = 'id20852256_usuarios';  // Nome do banco de dados
+$servername = "localhost";
+$username = "id20852256_ahnert";
+$password = "Pazdejah1.";
+$dbname = "id20852256_usuarios";
 
 // Conexão com o banco de dados MySQL
 $mysqli = new mysqli($hostname, $username, $password, $database);
