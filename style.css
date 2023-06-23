@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(7, 7, 26);
+ 
+}
+header .logo {
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left:0;
+}
+header .menu {
+    margin-left: 50px;
+    cursor: pointer;
+    align-items: center;
+}
+.menu img {
+    width:27px ;
+    height: 27px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+.container .left-side {
+    background-image: url(Imagens/eu.jpg);
+    background-color:blue;
+    flex: 1;
+
+}
+.container .right-side {
+    background-color: black;
+    text-align: center;
+    flex: 1;
+    background-size:auto;
+    background-position: center;
+}
+.container .right-side ul {
+    padding: 20px 10px;
+}
+.container .right-side ul li {
+    top: 0;
+    margin: 0;
+    color: white;
+    list-style: none;
+    justify-content:space-around;
+    align-items:initial ;
+    flex: 1;
+    display:flex;
+    max-width: 50vh;
+}
+img {
+        width: 200px;
+        display: flex;
+        margin-left: 100px;
+}
+.image {
+        width: 200px;
+        height: 200px;
+      }
+.image img {
+        -webkit-transition: all 1s ease;
+        /* Safari and Chrome */
+        -moz-transition: all 1s ease;
+        /* Firefox */
+        -o-transition: all 1s ease;
+        /* IE 9 */
+        -ms-transition: all 1s ease;
+        /* Opera */
+        transition: all 1s ease;
+      }
+.image:hover img {
+        -webkit-transform: scale(2.25);
+        /* Safari and Chrome */
+        -moz-transform: scale(2.25);
+        /* Firefox */
+        -ms-transform: scale(2.25);
+        /* IE 9 */
+        -o-transform: scale(2.25);
+        /* Opera */
+        transform: scale(2.25);
+      }
