@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Gabriel Andrade Ahnert</title>
+    <link rel="preload" href="Imagens">
     <style>
         @keyframes developer {
             0% {color: rgba(19, 92, 175, 0.425);}
@@ -335,37 +336,4 @@
     </footer>
 </body>
 </html>
-<script type="">
-<?php
-// Configurações do banco de dados MySQL
-$hostname = 'localhost';  // Nome do servidor MySQL
-$username = 'id20852256_ahnert';  // Nome de usuário do MySQL
-$password = 'Pazdejah1.';  // Senha do MySQL
-$database = 'id20852256_usuarios';  // Nome do banco de dados
 
-// Conexão com o banco de dados MySQL
-$mysqli = new mysqli($hostname, $username, $password, $database);
-
-// Verifica se houve algum erro na conexão
-if ($mysqli->connect_errno) {
-    die('Falha na conexão com o banco de dados: ' . $mysqli->connect_error);
-}
-
-// Obtém os valores enviados pelo formulário
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$mensagem = $_POST['mensagem'];
-
-// Insere os dados no banco de dados
-$query = "INSERT INTO mensagens (nome, email, mensagem) VALUES ('$nome', '$email', '$mensagem')";
-
-if ($mysqli->query($query)) {
-    echo 'Mensagem enviada com sucesso!';
-} else {
-    echo 'Erro ao enviar a mensagem: ' . $mysqli->error;
-}
-
-// Fecha a conexão com o banco de dados
-$mysqli->close();
-?>
-</script>
