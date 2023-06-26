@@ -17,7 +17,6 @@
             margin: 0;
         }
         section {
-            margin-bottom: 100px;
             background-color: black;
         }
         header {
@@ -100,7 +99,7 @@
             text-shadow: 1px 1px 1px black;
             padding-top: 500px;
             color:rgba(5, 12, 20, 0.425);
-            font-size: 100px;
+            font-size: 80px;
             animation:developer ;
             animation-duration: 10s;
             animation-iteration-count: infinite;
@@ -205,7 +204,7 @@
                 }
                 header {
                     width:auto;
-                    display: table-cell;
+                   
                 }
                 header .logo {
                     font-size: 18px; /* Reduza o tamanho da fonte para telas menores */
@@ -215,7 +214,8 @@
                 .container {
                    /* Altere a direção de exibição para empilhar os elementos verticalmente */
                     height: auto; /* Remova a altura fixa para que o conteúdo se ajuste à altura do conteúdo */
-                    display: table-row;
+                    display: grid;
+                    grid-row: auto;
                     width: auto;
                 }
 
@@ -232,9 +232,7 @@
                     margin-top: 10px;
                 }
                 .image img {
-                    width: 300px; /* Reduza o tamanho da imagem para telas menores */
-                    margin-left: 270px;/* Remova a margem esquerda para centralizar a imagem */
-                    align-items: center;
+                    width: 300px; /* Reduza o tamanho da imagem para telas menores */                    align-items: center;
                     justify-content: center;
                     display: flex;
                     margin-top: 20px; /* Adicione um espaçamento inferior para separar as imagens */
@@ -244,14 +242,13 @@
                     /* Safari and Chrome */
                     -moz-transform: scale(100vh);
                     /* Firefox */
-                    -ms-transform: scale(2.7);
+                    -ms-transform: scale(2);
                     /* IE 9 */
-                    -o-transform: scale(2.7);
+                    -o-transform: scale(2);
                     /* Opera */
-                    transform: scale(2.7);
+                    transform: scale(2);
                   }
                   form {
-                    width: 104vh;
                     background-image: url(https://media4.giphy.com/media/isqxY03RuhGxNbCPzY/giphy.gif?cid=ecf05e475ew8z6dqafbiiivjsraqtuw6whxe9216wv47ef13&ep=v1_gifs_search&rid=giphy.gif&ct=g);
                     text-align: center;
                     border: solid 1px black;
