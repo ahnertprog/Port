@@ -152,9 +152,10 @@
                 transform: scale(2.25);
               }
               form {
-                background-image: url(https://media4.giphy.com/media/isqxY03RuhGxNbCPzY/giphy.gif?cid=ecf05e475ew8z6dqafbiiivjsraqtuw6whxe9216wv47ef13&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+                background-image: url(Imagens/giphy.gif);
                 text-align: center;
                 border: solid 1px black;
+                color:blanchedalmond;
               }
               #contact-us {
                 text-align: center;
@@ -249,7 +250,6 @@
                     transform: scale(2);
                   }
                   form {
-                    background-image: url(https://media4.giphy.com/media/isqxY03RuhGxNbCPzY/giphy.gif?cid=ecf05e475ew8z6dqafbiiivjsraqtuw6whxe9216wv47ef13&ep=v1_gifs_search&rid=giphy.gif&ct=g);
                     text-align: center;
                     border: solid 1px black;
                   }
@@ -281,7 +281,7 @@
                 <ul>
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="">Our Projects</a></li>
                     <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
@@ -332,7 +332,7 @@
         <br>
     </section>
     <footer>
-        <form method="post" action="mailto:ahnerttrenha@gmail.com">
+        <form method="post">
             <h2 id="contact-us">Contact us</h2>
             <label for="nome">Nome: <br></label>
             <input type="text" name="nome" required><br><br>
@@ -345,6 +345,38 @@
             
             <input type="submit" value="Enviar Mensagem">
         </form>
+        
+        <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("YZiEXlwIAFAqnbso5");
+            })();
+        
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Impede o envio do formulário
+                
+                var nome = document.getElementsByName("nome")[0].value;
+                var email = document.getElementsByName("email")[0].value;
+                var mensagem = document.getElementsByName("mensagem")[0].value;
+                
+                var templateParams = {
+                    from_name: nome,
+                    reply_to: email,
+                    message: mensagem
+                };
+                
+                emailjs.send("service_adqllvg", "template_k1ut9l1", templateParams)
+                    .then(function(response) {
+                        console.log("E-mail enviado com sucesso!", response.status, response.text);
+                        // Limpar campos do formulário, se necessário
+                        document.getElementById("contact-form").reset();
+                    }, function(error) {
+                        console.error("Erro ao enviar o e-mail:", error);
+                    });
+            });
+        </script>
     </footer>
 </body>
 </html>

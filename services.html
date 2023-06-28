@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <title>Services</title>
     <style>
         * {
             font-family: 'Montserrat', sans-serif;
@@ -402,10 +402,65 @@
             height: 100px;
             border-radius: 100px;
         }
+        .section-service3 h1 {
+            color:blue;
+            text-align: center;
+            font-size: 50px;
+        }
+        .section-services3 {
+            display: flex;
+        }
+        .section-service3 {
+        
+            padding: 20px;
+        }
+        .section-body3 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .section-body3 p {
+            margin-top: 20px;
+        }
 
         
         @media (min-width:450px) and (max-width:800px) {
-
+            .menu-opener{
+                display: block;
+                width: 30px;
+                margin-right: 30px;
+                
+        
+            }
+            nav {
+                display: none;
+                position: absolute;
+                z-index: 99;
+                background-color: rgba(29, 29, 161, 0.9);
+                width: 80vw;
+                top: 100px;
+                right: 0;
+            }
+            .menu ul {
+                flex-direction: column;
+            }
+            .menu li a {
+                font-weight: bold;
+                height: 50px;
+                font-size: 25px;
+                border: none;
+            }
+            .menu li.active a {
+                border: none;
+                color: blue;
+            }
+            .logo {
+                margin-left: 30px;
+            }
             .section-about-us {
                 flex-direction: column;
             }
@@ -417,7 +472,33 @@
             .section-about-us--right {
                 width: auto;
             }
+            .section-services {
+                flex-wrap: wrap;
+            }
+            .section-service {
+                min-width: 50%;
+            }
+            .section-service:first-child {
+                border: none;
+            }
+            .section-team {
+                max-width: 580px;
+            }
+            .section-services2 {
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .section-services3 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
         }
+        
+        
         
         @media (max-width:450px) {
             .menu-opener{
@@ -454,13 +535,6 @@
             .logo {
                 margin-left: 30px;
             }
-            header {
-                width:auto;
-            }
-            header .logo {
-                font-size: 18px; /* Reduza o tamanho da fonte para telas menores */
-                width: 100vh;
-            }
             .section-about-us {
                 flex-direction: column;
             }
@@ -470,13 +544,112 @@
                 margin-bottom: 30px;
             }
             .section-about-us--right {
-                height: 170px;
                 margin-left: 30px;
                 margin-right: 30px;
                 width: auto;
             }
             .section-about-us--right img {
                 width: 100%;
+            }
+            .premium-prod .section-about-us--right {
+                padding: 20px;
+            }
+            .premium-prod .section-about-us--right p {
+                width: none;
+            }
+            .section-services {
+                flex-wrap: wrap;
+            }
+            .section-service {
+                min-width: 100%;
+            }
+            .section-service:first-child {
+                border: none;
+            }
+            .section-team {
+                max-width: 280px;
+            }
+            .section-projects--filters {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            .section-services2 {
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .section-services3 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .banner h1 {
+                font-size: 27px;
+            }
+            .banner h2 {
+                font-size: 20px;
+            }
+            .section-share {
+                display:flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items:center;
+                padding:20px;
+                background-color:#FFF;
+                color:#999;
+                padding: 20px;
+                border-bottom: 2px solid #ccc;
+            }
+            .section-share--legend {
+                display:flex;
+                align-items:center;
+                margin-right:40px;
+            }
+            .section-share--legend img {
+                margin-right:10px;
+            }
+            .section-share--item {
+                font-size:12px;
+                margin-right:20px;
+                display:flex;
+                align-items:center;
+                cursor:pointer;
+            }
+            .section-share--icon {
+                width:30px;
+                height:30px;
+                border-radius:15px;
+                background-color:#CCC;
+                margin-right:5px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .section-share--icon img {
+                height:12px;
+            }
+            .section-share--icon.twitter {
+                background-color:#34c5f0;
+            }
+            .section-share--icon.linkedin {
+                background-color:#127cb4;
+            }
+            .section-share--icon.facebook {
+                background-color:#336297;
+            }
+            .section-share--icon.googleplus {
+                background-color:#e74237;
+            }
+            .section-share--icon.pinterest {
+                background-color:#b71c29;
+            }
+            .section-team--social {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
             }
         }
     </style>
@@ -500,58 +673,71 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li class="active"><a href="">Services</a></li>
                     <li><a href="">Our Projects</a></li>
                     <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="default light">
-        <div class="section-title">Quem somos</div>
-        <div class="section-desc">O que fazemos ?</div>
+    <section class="default dark">
+        <div class="section-title">Services</div>
+        <div class="section-desc">Services that we provide</div>
         <div class="section-body">
-            <div class="section-about-us">
-                <div class="section-about-us--left">
-                    <p>O layout de um site é feito, em parte, por um designer, que planeja o uso correto de cores e formas para criar uma boa experiência visual. No entanto, é o trabalho do Web Developer para transformar o design em um site interativo.</p>
-                    <br><br>
-                   </div>
-                <div class="section-about-us--right">
-                    <img src="Imagens/designer.jpg" alt="">
+            <div class="section-services">
+                <div class="section-service">
+                    <img src="icones/medalha.png">
+                    <h4>High quality design </h4>
+                    <p>High performance design construction</p>
+                </div>
+                <div class="section-service">
+                    <img src="icones/estrela.png">
+                    <h4>Modern Design</h4>
+                    <p>Modern design with advanced quality</p>
+                </div>
+                <div class="section-service">
+                    <img src="icones/relogio.png">
+                    <h4>Regular Updates</h4>
+                    <p>Fast Update</p>
+                </div>
+                <div class="section-service">
+                    <img src="icones/balao.png">
+                    <h4>Fast and free support</h4>
+                    <p>Fast quality support</p>
                 </div>
             </div>
         </div>
     </section>
-    <br><br>
-    <section class="default light">
-        <div class="section-title">Banco de dados</div>
-        <div class="section-desc">O que fazemos ?</div>
-        <div class="section-body">
-            <div class="section-about-us">
-                <div class="section-about-us--left">
-                    <p>Monitorar clientes, inventário de dados e funcionários. Manter o desempenho de aplicações e bancos de dados. Armazenar e organizar tipos de dados exclusivos e variados. Automatizar processos e procedimentos de banco de dados.
-                    </p>
-                    <br><br>
-                   </div>
-                <div class="section-about-us--right">
-                    <img src="Imagens/banco-de-dados.png" alt="">
+    
+    <section class="default dark">
+        <div class="section-title">SERVIÇOS</div>
+        <div class="section-desc">SERVIÇOS QUE PRESTAMOS</div>
+        <div class="section-body3">
+            <div class="section-services3">
+                <div class="section-service3">
+                    <h1>Design de alta qualidade</h1>
+                    <div class="border-mini"></div>
+                    <h4></h4>
+                    <p>Contrução de projeto de alto desempenho</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <br><br>
-    <section class="default light">
-        <div class="section-title">Controle de versão</div>
-        <div class="section-desc">O que fazemos ?</div>
-        <div class="section-body">
-            <div class="section-about-us">
-                <div class="section-about-us--left">
-                    <p>O controle de versão, também conhecido como controle de fonte, é a prática de rastrear e gerenciar as alterações em um código de software. Os sistemas de controle de versão são ferramentas de software que ajudam as equipes de software a gerenciar as alterações ao código-fonte ao longo do tempo.</p>
-                    <br><br>
-                   </div>
-                <div class="section-about-us--right">
-                    <img src="Imagens/images.png" alt="">
+                <div class="section-service3">
+                    <h1>Design Moderno</h1>
+                    <div class="border-mini"></div>
+                    <h4></h4>
+                    <p>Design moderno com qualidade avançada</p>
+                </div>
+                <div class="section-service3">
+                    <h1>Atualizações Regulares</h1>
+                    <div class="border-mini"></div>
+                    <h4></h4>
+                    <p>Atualização rapida</p>
+                </div>
+                <div class="section-service3">
+                    <h1>Suporte Rápido</h1>
+                    <div class="border-mini"></div>
+                    <h4></h4>
+                    <p>Suporte de qualidade rápida</p>
                 </div>
             </div>
         </div>
