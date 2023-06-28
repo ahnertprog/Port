@@ -1,3 +1,9 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 @keyframes developer {
     0% {color: rgba(19, 92, 175, 0.425);}
     25% {color: rgba(100, 38, 180, 0.425);}
@@ -56,6 +62,7 @@ header .menu {
     text-transform: uppercase;
     font-weight: 600;
     padding-right: 10px;
+    padding-left:10px;
     display: flex;
     height: 100px;
     align-items: center;
