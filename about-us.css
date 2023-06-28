@@ -410,7 +410,7 @@ header .menu {
         display: none;
         position: absolute;
         z-index: 99;
-        background-color: rgba(29, 29, 161, 0.9);
+        background-color: rgba(5, 12, 20, 0.425);
         width: 80vw;
         top: 100px;
         right: 0;
@@ -426,7 +426,7 @@ header .menu {
     }
     .menu li.active a {
         border: none;
-        color: blue;
+        color: #35819c;
     }
     .logo {
         margin-left: 30px;
@@ -494,7 +494,7 @@ header .menu {
     }
     .menu li.active a {
         border: none;
-        color:rgb(45, 161, 142);
+        color:#35819c;
     }
     header .logo a {
         color: #35819c;

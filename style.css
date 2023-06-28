@@ -193,7 +193,7 @@ header .menu {
         }
         .menu li.active a {
             border: none;
-            color:rgb(45, 161, 142);
+            color:#35819c;
         }
         header .logo a {
             color: #35819c;
