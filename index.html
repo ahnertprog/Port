@@ -77,53 +77,21 @@
         <br>
         <br>
     </section>
-    <footer>
-        <form method="post">
-            <h2 id="contact-us">Contact us</h2>
-            <label for="nome">Nome: <br></label>
-            <input type="text" name="nome" required><br><br>
-            
-            <label for="email">Email: <br></label>
-            <input type="email" name="email" required><br><br>
-            
-            <label for="mensagem">Mensagem: <br></label>
-            <textarea name="mensagem" required></textarea><br><br>
-            
-            <input type="submit" value="Enviar Mensagem">
-        </form>
-        
-        <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function() {
-                emailjs.init("YZiEXlwIAFAqnbso5");
-            })();
-        
-            document.getElementById("contact-form").addEventListener("submit", function(event) {
-                event.preventDefault(); // Impede o envio do formulário
-                
-                var nome = document.getElementsByName("nome")[0].value;
-                var email = document.getElementsByName("email")[0].value;
-                var mensagem = document.getElementsByName("mensagem")[0].value;
-                
-                var templateParams = {
-                    from_name: nome,
-                    reply_to: email,
-                    message: mensagem
-                };
-                
-                emailjs.send("service_adqllvg", "template_k1ut9l1", templateParams)
-                    .then(function(response) {
-                        console.log("E-mail enviado com sucesso!", response.status, response.text);
-                        // Limpar campos do formulário, se necessário
-                        document.getElementById("contact-form").reset();
-                    }, function(error) {
-                        console.error("Erro ao enviar o e-mail:", error);
-                    });
-            });
-        </script>
-    </footer>
+        <section class="default dark rodape">
+            <div class="section-body">
+                <div class="section-title" style="color:white; text-align: center;"><h3>Social Media</h3></div>
+                <div class="section-services">
+                    <div class="section-service">
+                        <div class="section-team--social">
+                                    <a href="https://www.linkedin.com/in/gabriel-ahnert/"><img src="icones/linkedin.png"></a>
+                                        <a href="https://twitter.com/ahnert_"><img src="icones/twitter.png"></a>
+                                            <a href="https://github.com/ahnertprog"><img src="icones/github-logo.png" width="15px"></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
 
