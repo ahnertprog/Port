@@ -250,7 +250,7 @@ header .menu {
         
     }
     .section-team--social a:hover {
-        background-color: blue;
+        background-color:#35819c;
     }
 
 @media (max-width: 767px) {
