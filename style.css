@@ -332,6 +332,7 @@ header .menu {
             transform: scale(2);
           }
           form {
+            width: 100%;
             text-align: center;
             border: solid 1px black;
           }
