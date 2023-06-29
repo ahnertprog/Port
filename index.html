@@ -7,6 +7,14 @@
     <link rel="preload" href="style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Imagens/Ahnert.png" type="image/x-icon">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YZiEXlwIAFAqnbso5");
+   })();
+</script>
     <title>ADWEB</title>
     <script type="text/javascript">
         window.onload = function(){
@@ -18,6 +26,32 @@
                 }
             });
         };
+
+        function sendEmail(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+
+            // Obtém os valores dos campos do formulário
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Configura os parâmetros do e-mail
+            var params = {
+                from_name: name,
+                from_email: email,
+                message: message,
+            };
+
+            // Envia o e-mail usando o EmailJS
+            emailjs.send('service_adqllvg', 'template_vkm9r9j', params, 'YZiEXlwIAFAqnbso5')
+                .then(function(response) {
+                    alert('E-mail enviado com sucesso!', response.status, response.text);
+                    // Faça algo aqui após o envio bem-sucedido do e-mail, como exibir uma mensagem de sucesso ao usuário
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar o e-mail:', error);
+                    // Faça algo aqui se ocorrer um erro ao enviar o e-mail, como exibir uma mensagem de erro ao usuário
+                });
+        }
     </script>
 </head>
 <body>
@@ -40,58 +74,73 @@
         <div class="left-side">
             <div class="left-title">Developer</div>
         </div>
-        <div class="certificados ">
-            <h2 style="color: white; text-align:center">Certificações </h5>
+        <div class="certificados">
+            <h2 style="color: white; text-align:center">Certificações</h2>
         </div>
         <div class="right-side">
-                    <div class="title">
-                    Certificação em HTML5
-                    <br> 
-                    e
-                    CSS3
-                    </div>
-                    <div class="thumbnail">
-                        <div class="image">
-                          <img src="Imagens/HTML5.jpg" alt="image" />
-                        </div>
-                      </div>
-                    <div class="title">
-                    Certificação em Banco de Dados 
-                    </div>
-                    <div class="thumbnail">
-                        <div class="image">
-                          <img src="Imagens/Banco de dados.jpg" alt="image" />
-                        </div>
-                      </div>
-                    <div class="title">
-                    Certificação em GIT/GITHUB
-                    </div>
-                    <div class="thumbnail">
-                        <div class="image">
-                          <img src="Imagens/Git.jpg" alt="image" />
-                        </div>
-                      </div>
+            <div class="title">
+                Certificação em HTML5
+                <br> 
+                e
+                CSS3
+            </div>
+            <div class="thumbnail">
+                <div class="image">
+                    <img src="Imagens/HTML5.jpg" alt="image" />
+                </div>
+            </div>
+            <div class="title">
+                Certificação em Banco de Dados 
+            </div>
+            <div class="thumbnail">
+                <div class="image">
+                    <img src="Imagens/Banco de dados.jpg" alt="image" />
+                </div>
+            </div>
+            <div class="title">
+                Certificação em GIT/GITHUB
+            </div>
+            <div class="thumbnail">
+                <div class="image">
+                    <img src="Imagens/Git.jpg" alt="image" />
+                </div>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
     </section>
-        <section class="default dark rodape">
-            <div class="section-body">
-                <div class="section-title" style="color:white; text-align: center;"><h3>Social Media</h3></div>
-                <div class="section-services">
-                    <div class="section-service">
-                        <div class="section-team--social">
-                                    <a href="https://www.linkedin.com/in/gabriel-ahnert/"><img src="icones/linkedin.png"></a>
-                                        <a href="https://twitter.com/ahnert_"><img src="icones/twitter.png"></a>
-                                            <a href="https://github.com/ahnertprog"><img src="icones/github-logo.png" width="15px"></a>
-
-                        </div>
+    <section class="default dark rodape">
+        <div class="section-body">
+            <div class="section-title" style="color:white; text-align: center;"><h3>Social Media</h3></div>
+            <div class="section-services">
+                <div class="section-service">
+                    <div class="section-team--social">
+                        <a href="https://www.linkedin.com/in/gabriel-ahnert/"><img src="icones/linkedin.png"></a>
+                        <a href="https://twitter.com/ahnert_"><img src="icones/twitter.png"></a>
+                        <a href="https://github.com/ahnertprog"><img src="icones/github-logo.png" width="15px"></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <section id="contact-us">
+        <div class="container">
+            <form method="post" onsubmit="sendEmail(event)">
+                <h2>Contact Us</h2>
+                <div class="form-group">
+                    <label for="name">Nome: <br></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: <br></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem: <br></label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
 </body>
 </html>
-
