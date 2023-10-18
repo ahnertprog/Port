@@ -85,7 +85,7 @@ header .menu {
 .container {
     display: flex;
     justify-content: space-around;
-    height: 100vh;
+    height: auto;
 }
 .container .left-side {
     background-size: cover;
@@ -98,6 +98,7 @@ header .menu {
     padding-top: 500px;
     color:rgba(5, 12, 20, 0.425);
     font-size:90px;
+    text-align:center;
     animation:developer ;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -105,10 +106,15 @@ header .menu {
 .thumbnail {
     padding: 0;
 }
+.thumbnail .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container .right-side {
     background-color: black;
     text-align: center;
-    flex: 1;
+    flex: 0.5;
     background-size:auto;
     background-position: center;
     padding: 0;
@@ -121,13 +127,10 @@ header .menu {
 }
 .image img {
         width: 200px;
-        
-        
 }
 .image {
-        width: 200px;
-        height: 200px;
-      }
+    height: 200px;
+}
 .image img {
         -webkit-transition: all 1s ease;
         /* Safari and Chrome */
@@ -239,12 +242,15 @@ header .menu {
         justify-content: center;
         
     }
+    .section-body {
+        background-color: #000000;
+    }
     .section-team--social a {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
         background-color: #333;
         border-radius: 13px;
         margin-right: 10px;
@@ -253,6 +259,9 @@ header .menu {
     .section-team--social a:hover {
         background-color:#35819c;
     }
+.section-team--social .git:hover{
+    background-color:#ffffff;
+}
 
 @media (max-width: 767px) {
         /* Aplique os estilos aqui que deseja que sejam aplicados em telas menores ou iguais a 767px de largura */
